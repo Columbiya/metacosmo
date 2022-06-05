@@ -1,0 +1,90 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.immerse {
+    position: relative;
+
+    height: 930px;
+    background: url('../../../assets/main/immerse-bg.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.fullHeight {
+    height: 100%;
+
+    position: relative;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 5;
+}
+
+.logoItem {
+    display: flex;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+
+    &:first-child {
+        img {
+            width: 100px;
+            margin-left: 35px;
+        }
+    }
+}
+
+.immerseInner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 72px;
+    margin-bottom: 65px;
+    color: #fff;
+    text-transform: uppercase;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.text {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 100px;
+    color: #fff;
+
+    max-width: 520px;
+    text-align: center;
+}
+
+.string {
+    position: absolute;
+    z-index: 100;
+
+    &.first {
+        top: -77px;
+        left: 0;
+    }
+
+    &.second {
+        bottom: -148px;
+        right: 0;
+    }
+}

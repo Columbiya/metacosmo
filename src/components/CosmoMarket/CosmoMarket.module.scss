@@ -1,0 +1,106 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.cosmomarket {
+    margin: 100px 0;
+}
+
+.title {
+    font-size: 72px;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.inner {
+    background: url('../../assets/cosmomarket/market-image.png') right center no-repeat;
+}
+
+.subtitle {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.text {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+    max-width: 680px;
+
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    }
+}
+
+.highlights {
+    margin-bottom: 150px;
+
+    position: relative;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.hightlightsInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 130px 0;
+    box-sizing: border-box;
+
+    height: 100%;
+}
+
+.hightlightsFooter {
+    background: url('../../assets/cosmomarket/highlights-bg.jpg') center no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
+
+.highlightsItem {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #fff;
+
+    max-width: 40%;
+    width: 100%;
+    padding-left: 100px;
+
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 50px;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        position: absolute;
+        left: 40px;
+        top: 50%;
+        transform: translateY(-50%) skew(-15deg, -15deg);
+    }
+
+    &:last-child {
+        max-width: 880px;
+        margin: 0 auto;
+    }
+}
+
+.spring {
+    position: absolute;
+    top: -11px;
+    left: 0;
+}
+
+.learnMoreContainer {
+    margin-bottom: 150px;
+}

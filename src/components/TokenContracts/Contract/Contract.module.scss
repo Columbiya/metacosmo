@@ -1,0 +1,38 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.contractTitle {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.address {
+    display: block;
+    padding: 25px 0;
+    background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+    border-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+
+    margin-top: 15px;
+}
+
+.contract {
+    width: 60%;
+
+    &:not(:last-child) {
+        margin-bottom: 70px;
+    }
+
+    button {
+        margin-top: 15px;
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,36 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 72px;
+    text-transform: uppercase;
+    margin: 100px 0;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.learnMoreContainer {
+    margin-bottom: 200px;
+}
+
+.string {
+    position: absolute;
+
+    &.first {
+        top: 40px;
+        left: 0;
+    }
+
+    &.second {
+        bottom: 95px;
+        right: 0;
+    }
+}

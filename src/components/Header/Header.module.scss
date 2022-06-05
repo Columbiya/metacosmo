@@ -1,0 +1,146 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.header {
+    background-color: #05254c;
+    height: 85px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.headerContainer {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.nav {
+    display: flex;
+}
+
+.logo {
+    cursor: pointer;
+    align-self: center;
+}
+
+.navLink {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    cursor: pointer;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;
+
+    &:not(:last-child) {
+        margin-right: 35px;
+    }
+
+    .dropdown {
+        text-align: left;
+
+        width: 280px;
+
+        position: absolute;
+        top: 78%;
+        left: -40px;
+        background: #fff;
+        color: #000;
+        
+        font-family: 'Open Sans', sans-serif;
+        padding: 25px 40px;
+        display: none;
+
+        box-shadow: 5px 15px 30px rgba(0, 0, 0, .5);
+
+        animation: fadeUp .3s ease 1;
+        animation-fill-mode: forwards;
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            .listText {
+                color: #000;
+
+                a {
+                    color: #000;
+                }
+        
+                &:hover {
+                    @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+                }
+            }
+        }
+    }
+
+    &:hover .dropdown {
+        display: block;
+    }
+
+
+
+    &:hover .groupName {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+
+    &.enter {
+        text-transform: uppercase;
+        position: relative;
+        width: 230px;
+        height: 30px;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #fff;
+        align-self: center;
+
+        &:hover {
+            @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+        }
+
+        &:hover {
+            border: 2px solid;
+            border-image-slice: 1;
+            border-width: 2px;
+            border-image-source: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        }
+
+    }
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.dropdownInnerList {
+    padding-left: 20px;
+    margin-top: 15px;
+
+    border-left: 1px solid #000;
+}
+
+
+
+@keyframes fadeUp {
+    0% {
+        transform: translate(0, 20%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}

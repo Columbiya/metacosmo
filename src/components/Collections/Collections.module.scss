@@ -1,0 +1,21 @@
+.collections {
+    margin-top: 50px;
+}
+
+.learnMoreContainer {
+    margin-bottom: 200px;
+}
+
+.string {
+    position: absolute;
+
+    &.first {
+        top: 40px;
+        left: 0;
+    }
+
+    &.second {
+        bottom: 95px;
+        right: 0;
+    }
+}

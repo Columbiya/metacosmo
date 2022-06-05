@@ -1,0 +1,182 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+.integrationsTitle {
+    font-size: 72px;
+    text-transform: uppercase;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.inner {
+    position: relative;
+}
+
+.footer {
+    max-width: 700px;
+}
+
+.video {
+    position: absolute;
+    right: -80px;
+    bottom: 0;
+    z-index: 50;
+}
+
+.footerText {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+
+    strong {
+        font-size: 36px;
+        line-height: 48px;
+        text-transform: uppercase;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    }
+}
+
+.playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.keyLights {
+    margin: 150px 0;
+}
+
+.lightsItems {
+    margin-top: 80px;
+    height: 930px;
+
+    position: relative;
+
+    background: url('../../assets/PartnerIntegrations/key-highlights-bg.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.lightsInner {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.lightsItem {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #fff;
+    width: 44%;
+    padding-left: 80px;
+    position: relative;
+
+    &:last-child {
+        max-width: 100%;
+        width: 600px;
+        margin: 70px auto;
+    }
+
+    p {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 60px;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%) skew(-15deg, -15deg);
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 60px;
+    }
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.lights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spring {
+    position: absolute;
+    top: -153px;
+    right: 0;
+}
+
+.features {
+    margin-bottom: 200px;
+}
+
+.featuresTitle {
+    max-width: 1020px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 150px;
+}
+
+.featuresInner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 600px;
+    padding-top: 185px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 48px;
+
+    &:nth-child(1) {
+        background: url('../../assets/PartnerIntegrations/features-1.png') center top no-repeat;
+    }
+
+    &:nth-child(2) {
+        background: url('../../assets/PartnerIntegrations/features-2.png') center top no-repeat;
+    }
+
+    &:nth-child(3) {
+        background: url('../../assets/PartnerIntegrations/features-3.png') center top no-repeat;
+    }
+
+    &:last-child {
+        width: 100%;
+        text-align: center;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 120px;
+    }
+}
+
+.learnMoreContainer {
+    margin-bottom: 300px;
+}

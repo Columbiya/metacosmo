@@ -1,0 +1,183 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.learnMoreContainer {
+    margin-bottom: 300px;
+}
+
+.inner {
+    background: url('../../assets/buy-cosmolands/wallet.png') left center no-repeat;
+    margin-top: 100px;
+}
+
+.buyInfo {
+    max-width: 1004px;
+    min-height: 285px;
+    margin-left: auto;
+}
+
+.buyHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 60px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.walletInfo {
+    display: flex;
+
+    p:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.walletInfo {
+    font-size: 24px;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.nftsInfo {
+    max-width: 1310px;
+    margin: 100px auto;
+}
+
+.nftsInfoItem {
+    font-size: 36px;
+    text-align: center;
+    max-width: 280px;
+
+    padding-left: 100px;
+
+    span {
+        display: block;
+    }
+
+    &:first-child {
+        background: url('../../assets/buy-cosmolands/total-nfts.png') left center no-repeat;
+    }
+
+    &:last-child {
+        background: url('../../assets/buy-cosmolands/price.png') left center no-repeat;
+    }
+}
+
+.nftsHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar {
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 80px;
+    padding: 10px;
+    
+    margin: 40px 0 70px;
+}
+
+.progressBar {
+    height: 100%;
+    background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    min-width: 95px;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+
+    &.full {
+       border-radius: 80px; 
+    }
+
+    span {
+        margin-right: 8px;
+    }
+}
+
+.buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nftsInput {
+    border: none;
+    border-bottom: 1px solid #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    width: 560px;
+    padding-bottom: 15px;
+    outline: none;
+
+    text-align: center;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+}
+
+.buyLimitations {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.buyingInstructions {
+    display: block;
+
+    color: #000;
+    text-decoration: underline;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    text-align: center;
+
+    position: relative;
+    top: 20px;
+}
+
+.nftsLink {
+    color: #000;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.cosmolandNFTs {
+    text-align: center;
+    margin: 110px 0;
+
+    .nftsLink:first-child {
+        margin-right: 40px;
+    }
+}
+
+.wallets {
+    p {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    a {
+        display: block;
+        text-decoration: underline;
+        color: #000;
+    }
+}

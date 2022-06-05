@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  overflow: hidden;
+}
+
+.error {
+  color: red;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+.main {
+  margin-top: 119px;
+}
+
+@import './components/Preloader/Preloader.scss';

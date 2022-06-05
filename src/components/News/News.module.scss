@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.news {
+    position: relative;
+}
+
+.newsList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.string {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    z-index: -5;
+}
+
+.secondString {
+    position: absolute;
+    bottom: 200px;
+    right: 0;
+    z-index: -5;
+}

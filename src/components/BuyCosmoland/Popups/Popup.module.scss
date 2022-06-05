@@ -1,0 +1,258 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.warning {
+    background: #fff;
+    padding: 35px 35px 35px 165px;
+    font-size: 18px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    position: relative;
+
+    &::before {
+        content: "i";
+        font-size: 60px;
+        font-weight: 900;
+        display: block;
+        position: absolute;
+        left: 75px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -2px;
+        border-radius: inherit;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.placeholder {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(#fff, .9);
+    filter: blur(20px);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.popup {
+    width: 940px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 50px;
+    z-index: 1500000000000;
+
+    border-radius: 80px;
+
+    background: #fff;
+
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, .3);
+    animation: fadeUp .3s ease;
+    animation-fill-mode: forwards;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 60px;
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translate(-50%, -20%); 
+    }
+
+    100% {
+        transform: translate(-50%, -50%); 
+    }
+}
+
+.congratsContainer {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        margin-left: 100px;
+    }
+
+    span {
+        display: block;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 36px;
+    }
+
+    button {
+        margin-top: 30px;
+    }
+}
+
+.congratsTitle {
+    text-transform: uppercase;
+    font-size: 24px;
+    @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    margin-bottom: 35px;
+}
+
+.congratsText {
+    min-width: 480px;
+}
+
+.input {
+    display: block;
+    padding: 15px 15px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 2px solid #1eacef;
+    font-family: 'Montserrat', sans-serif;
+}
+
+textarea.input {
+    min-height: 100px;
+    max-height: 200px;
+    resize: vertical;
+}
+
+.label {
+    display: block;
+
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.inputContainer {
+    margin-bottom: 15px;
+}
+
+.fieldContainer {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.fieldError {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+    z-index: 5;    
+    font-family: 'Montserrat', sans-serif;
+}
+
+.becomeDevBtnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.triangle {
+    position: relative;
+
+    &.green::after {
+        border-bottom-color: lightgreen;
+    }
+
+    &.red::after {
+        top: 80%;
+        border-top-color: red;
+    }
+}
+
+.triangle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 10px solid transparent;
+}
+
+.tokensItem {
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.tokensDescrItem {
+    display: flex;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    p {
+        width: 90px;
+    }
+
+    .price {
+        margin-left: 30px;
+    }
+}
+
+.statisticsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 60px 0;
+}
+
+.statistics {
+    background: url('../../../assets/main/cvr-tokens-bg.png') right bottom no-repeat;
+
+    padding-bottom: 130px;
+}
+
+.tableCol {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        display: flex;
+        align-items: center;
+
+        height: 55px;
+
+        color: #fff;
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+.statisticsInfo {
+    display: flex;
+
+    img {
+        margin-right: 20px;
+    }
+}
+
+.statisticsTable {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        width: 100%;
+        height: 55px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -3;
+    }
+}

@@ -1,0 +1,39 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.warning {
+    background: #fff;
+    padding: 35px 35px 35px 165px;
+    font-size: 18px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    position: relative;
+    margin-top: 80px;
+
+    &::before {
+        content: "i";
+        font-size: 60px;
+        font-weight: 900;
+        display: block;
+        position: absolute;
+        left: 75px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -2px;
+        border-radius: inherit;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+    }
+
+    a {
+        color: #000;
+    }
+}

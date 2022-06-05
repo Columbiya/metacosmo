@@ -1,0 +1,71 @@
+@import '../../../mixins.scss';
+@import '../../../variables.scss';
+
+.join {
+    margin: 140px;
+}
+
+.title {
+    font-size: 36px;
+    span {
+        font-size: 60px;
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.joinContainer {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 50px;
+    border-top: 1px solid #096db1;
+}
+
+.circle {
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        position: absolute;
+        top: -60px;
+        left: 0;
+    }
+}
+
+.medias {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}
+
+.media {
+    width: 275px;
+    height: 70px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000;
+
+    border: 1px solid #000;
+    border-radius: 50px;
+
+    transition: color .5s ease-in-out;
+
+    img {
+        width: 40px;
+        margin-right: 30px;
+    }
+}

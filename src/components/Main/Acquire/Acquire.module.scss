@@ -1,0 +1,43 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.acquire {
+    margin-top: 50px;
+    height: 930px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url('../../../assets/main/acquire-bg.jpg') center no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.title {
+    font-size: 72px;
+    text-transform: uppercase;
+    margin: 90px 0 50px;
+    max-width: 680px;
+    line-height: 72px;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.text {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 80px;
+    max-width: 600px;
+}
+
+.image {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+}

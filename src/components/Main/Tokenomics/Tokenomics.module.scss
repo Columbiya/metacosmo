@@ -1,0 +1,47 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.inner {
+    background: url('../../../assets/main/cvr.png') left center no-repeat;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.tokenomics {
+    height: 930px;
+    margin-top: 150px;
+    overflow: hidden;
+
+    background: url('../../../assets/main/tokenomics-bg.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.info {
+    width: 50%;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.title {
+    font-size: 72px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 90px 0 50px;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.text {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    max-width: 442px;
+    margin-bottom: 80px;
+}

@@ -1,0 +1,146 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.why {
+    margin-top: 190px;
+    overflow: hidden;
+}
+
+.footer {
+    height: 1290px;
+
+    position: relative;
+
+    background: url('../../../assets/main/why-metacosmo-bg.jpg') center no-repeat;
+    background-size: cover;
+}
+
+
+.feature {
+    width: 10px;
+    height: 10px;
+}
+
+.table {
+    .column {
+        overflow: hidden;
+        &:first-child {
+            span {
+                text-align: left;
+                padding: 0 0 0 10px;
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+.column {
+    width: 8%;
+
+    span {
+        display: block;
+        width: 100%;
+        height: 55px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: rgba(#fff, .3);
+
+        &:first-child {
+            background: rgba(#fff, .5);
+        }
+    }
+
+    &:first-child {
+        width: 19%;
+    }
+
+    &:nth-child(2) {
+        span:first-child {
+            background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        }
+    }
+
+    &:not(:last-child) {
+        margin-right: 3px;
+    }
+}
+
+.features {
+    span:first-child {
+        background: transparent;
+    }
+}
+
+.table {
+    display: flex;
+}
+
+.checked {
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 13px;
+        height: 25px;
+        border-bottom-width: 5px;
+        border-bottom-style: solid;
+        border-bottom-color: #fff;
+        
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: #fff;
+
+        transform: rotate(45deg);
+    }
+}
+
+.metacosmo {
+    .checked::after {
+        border-color: #41dae6;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 80px;
+}
+
+.title {
+    font-size: 72px;
+    text-transform: uppercase;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.string {
+    position: absolute;
+    top: -179px;
+    left: 0;
+}
+
+.subtitle {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 36px;
+
+    max-width: 900px;
+}
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 90px 0;
+}

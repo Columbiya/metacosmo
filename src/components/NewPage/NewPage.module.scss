@@ -1,0 +1,136 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 55px;
+}
+
+.title {
+    font-size: 36px;
+    max-width: 900px;
+}
+
+.newsInfo {
+    font-size: 18px;
+    font-weight: 700;
+
+    span {
+        &:last-child {
+            padding-left: 15px;
+        }
+
+        &:first-child {
+            border-right: 1px solid #000;
+            padding-right: 15px;
+        }
+    }
+}
+
+.address {
+    width: 600px;
+    padding: 50px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-right: 55px;
+    margin-bottom: 55px;
+    background: linear-gradient(54deg, $startColorGradient, $endColorGradient)
+}
+
+.textUp {
+    display: flex;
+    text-align: justify;
+
+    div.text {
+        max-width: 750px;
+
+        p:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.text {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: justify;
+
+    p {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .bold {
+        font-weight: 700;
+    }
+}
+
+.regularText {
+    margin-top: 30px;
+}
+
+.quote {
+    @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    max-width: 840px;
+    margin: -50px auto 0;
+
+    display: flex;
+    flex-direction: column;
+    span {
+        font-size: 280px;
+    }
+}
+
+.quoteText {
+    font-size: 36px;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: -200px;
+    align-self: flex-end;
+    max-width: 730px;
+}
+
+.twoColumns {
+    max-width: 1280px;
+    margin: 90px auto 0;
+    display: flex;
+    justify-content: space-between;
+
+    .text {
+        max-width: 540px;
+    }
+}
+
+.oneColumnText {
+    max-width: 1280px;
+    margin: 90px auto 150px;
+}
+
+.news {
+    display: flex;
+}
+
+.related {
+    margin-top: 50px;
+    .title {
+        font-size: 36px;
+        margin-bottom: 55px;
+    }
+}
+
+.source {
+    font-size: 60px;
+    color: #000;
+
+    margin: 50px 0;
+    @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+} 
+
+.sourceTitle {
+    font-size: 36px;
+}

@@ -1,0 +1,23 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.news {
+    overflow: hidden;
+}
+
+.footer {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.title {
+    font-size: 60px;
+    @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+}

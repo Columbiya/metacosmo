@@ -1,0 +1,85 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.contacts {
+    position: relative;
+
+    margin-bottom: 100px;
+}
+
+.title {
+    font-size: 72px;
+    text-transform: uppercase;
+
+    margin: 70px 0;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.socialMedia {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    display: block;
+    font-size: 40px;
+    padding-top: 200px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+
+    margin-bottom: 100px;
+
+    transition: transform .5s ease;
+
+    &:hover {
+        transform: scale(0.8);
+    }
+
+    width: 50%;
+
+    &.twitter {
+        background: url('../../assets/main/twitter-large.png') center top no-repeat;
+    }
+
+    &.discord {
+        background: url('../../assets/main/discord-large.png') center top no-repeat;
+    }
+
+    &.telegram {
+        background: url('../../assets/main/telegram-large.png') center top no-repeat;
+    }
+
+    &.instagram {
+        background: url('../../assets/main/instagram-large.png') center top no-repeat;
+    }
+    
+    &.medium {
+        background: url('../../assets/main/medium-large.png') center top no-repeat;
+    }
+
+    &.email {
+        background: url('../../assets/main/email-large.png') center top no-repeat;
+    }
+}
+
+.string {
+    position: absolute;
+
+    &.first {
+        top: 40px;
+        left: 0;
+    }
+
+    &.second {
+        bottom: 95px;
+        right: 0;
+    }
+}
+
+.learnMoreContainer {
+    margin-bottom: 200px;
+}

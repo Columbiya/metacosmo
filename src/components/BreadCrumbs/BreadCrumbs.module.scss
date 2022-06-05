@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.breadCrumbs {
+    a {
+        font-weight: 700;
+        font-size: 24px;
+        color: #000;
+
+        &:first-child {
+            margin-right: 10px;
+        }
+
+        &:last-child {
+            margin-left: 10px;
+        }
+
+        &.active {
+            @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+        }
+    }
+}

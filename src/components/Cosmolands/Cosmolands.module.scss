@@ -1,0 +1,415 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.mainScreen {
+    margin-bottom: 150px;
+}
+
+.mainText {
+    position: relative;
+}
+
+.mainScreenImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.title {
+    font-size: 72px;
+    color: #000;
+    text-transform: uppercase;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.mainScreenTitle {
+    margin: 80px 0;
+}
+
+.mainInfo {
+    max-width: 650px;
+    font-size: 24px;
+
+    .textItem {
+        margin-bottom: 100px;
+        font-weight: 700;
+
+        & strong {
+            font-size: 45px;
+        }
+    }
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.features {
+    background: url('../../assets/Cosmolands/features-bg.jpg') center no-repeat;
+    background-size: cover;
+    height: 817px;
+}
+
+.featuresInner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featuresItem {
+    padding-left: 80px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    max-width: 1030px;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 60px;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) skew(-15deg, -15deg);
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 100px;
+    }
+}
+
+.consistsOf {
+    margin: 150px 0;
+}
+
+.consistsInner {
+    background: url('../../assets/Cosmolands/nft-small.png') left center no-repeat;
+    min-height: 430px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.consistsText {
+    font-size: 36px;
+    line-height: 55px;
+    font-weight: 700;
+    max-width: 980px;
+
+    span {
+        font-size: 48px;
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.moreFeaturesInner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.moreFeatures {
+    height: 930px;
+    background: url('../../assets/Cosmolands/more-features-bg.jpg') center no-repeat;
+    background-size: cover;
+    margin-bottom: 150px;
+}
+
+.featuresColumn {
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+    height: 50%;
+    justify-content: space-between;
+}
+
+.canBeUsed {
+    margin-bottom: 200px;
+}
+
+.canBeUsedTitle {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 150px;
+}
+
+.canBeUsedItem {
+    font-size: 30px;
+    padding-left: 250px;
+    min-height: 115px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 1000px;
+    margin: 0 auto;
+
+    &:nth-child(1) {
+        background: url('../../assets/Cosmolands/can-be-used-1.png') center left no-repeat;
+    }
+
+    &:nth-child(2) {
+        background: url('../../assets/Cosmolands/can-be-used-2.png') center left no-repeat;
+    }
+    
+    &:nth-child(3) {
+        background: url('../../assets/Cosmolands/can-be-used-3.png') center left no-repeat;
+    }
+    &:not(:last-child) {
+        margin: 0 auto 100px;
+    }
+}
+
+.beUsedList {
+    margin-left: 20px;
+}
+
+.itemBeUsed {
+    padding-left: 35px;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 20px;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%) skew(-15deg, -15deg);
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+.table {
+    margin-top: 150px;
+}
+
+.tableRow {
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    span {
+        width: 12%;
+
+        &:first-child {
+            text-transform: uppercase;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 60px;
+    }
+
+    &.gradient {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+       
+        span:not(:first-child) {
+            font-size: 65px;
+        }
+    }
+}
+
+.pricingText {
+    font-size: 36px;
+    font-weight: 700;
+    max-width: 850px;
+    margin: 70px 0 100px;
+}
+
+.pricingBuy {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 700;
+    text-align: center;
+
+    max-width: 1200px;
+    margin: 150px auto;
+}
+
+.bonus {
+    height: 930px;
+    background: url('../../assets/Cosmolands/bonus-bg.jpg') center no-repeat;
+    background-size: cover;
+
+    img {
+        margin-bottom: 70px;
+    }
+}
+
+.bonusInner {
+    background: url('../../assets/Cosmolands/bonus-spaceship.png') center right no-repeat;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.bonusList {
+    margin-top: 100px;
+}
+
+.bonusItem {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    padding-left: 60px;
+    max-width: 800px;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 50px;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) skew(-15deg, -15deg);
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    }
+}
+
+.fontLarge {
+    font-size: 109px;
+}
+
+.argumentTitle {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.argument {
+    margin: 200px 0;
+
+    position: relative;
+}
+
+.argumentText {
+    max-width: 1170px;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.argumentList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 100px;
+}
+
+.argumentItem {
+    width: 40%;
+    position: relative;
+    padding-left: 65px;
+    font-size: 30px;
+    font-weight: 500;
+
+    margin-bottom: 100px;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 50px;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) skew(-15deg, -15deg);
+    }
+}
+
+.string {
+    position: absolute;
+
+    &.first {
+        top: -80px;
+        left: 0;
+    }
+
+    &.second {
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.buyCosmoland {
+    height: 435px;
+    background: url('../../assets/main/buy-cvr-bg.jpg') center no-repeat;
+    background-size: cover;
+
+    margin-bottom: 130px;
+
+    position: relative;
+}
+
+.buyCosmolandImage {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.buyInner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buyText {
+    padding-left: 400px;
+}
+
+.buyTitle {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.joinText {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 70px;
+}
+
+.learnMoreContainer {
+    margin-bottom: 300px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+
+    button:not(:last-child),
+    a:not(:last-child) {
+        margin-right: 15px;
+    }
+}

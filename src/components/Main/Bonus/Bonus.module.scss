@@ -1,0 +1,80 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.bonus {
+    margin: 150px 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 72px;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.bonusContent {
+    height: 930px;
+    background: url('../../../assets/main/bonuses-bg.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.bonusSubtitle {
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.text {
+    color: #fff;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    max-width: 500px;
+
+    margin-bottom: 60px;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.bonusInner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 70px;
+}
+
+.bonusItem {
+    box-sizing: border-box;
+    min-width: 810px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 70px;
+
+    &:first-child {
+        background: url('../../../assets/main/metacosmo-bonus.png') left top no-repeat;
+    }
+
+    &:last-child {
+        text-align: left;
+        background: url('../../../assets/main/cosmoway-bonus.png') right top no-repeat;
+        background-position: 100% 50px;
+    }
+}

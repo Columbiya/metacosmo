@@ -1,0 +1,29 @@
+.articles {
+    display: flex;
+    position: relative;
+}
+
+.articlesList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.container {
+    position: relative;
+}
+
+.spring {
+    position: absolute;
+    z-index: -1;
+}
+
+.springOne {
+    bottom: 0;
+    left: 0;
+}
+
+.springTwo {
+    top: 120px;
+    right: 0;
+}

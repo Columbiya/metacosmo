@@ -1,0 +1,81 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.article {
+    width: 23%;
+    margin-right: 30px;
+    margin-bottom: 55px;
+    position: relative;
+
+    &:nth-child(4n) {
+        margin-right: 0;
+    }
+
+    &:hover .hider {
+        opacity: .15;
+    }
+}
+
+.header {
+    height: 70px;
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+
+    position: relative;
+}
+
+.footer {
+    padding: 40px 20px;
+    background: #edefee;
+    height: 209px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.read {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000;
+    position: relative;
+    z-index: 100;
+
+    &:hover {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.hider {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+
+    transition: opacity .5s ease-in-out;
+}
+
+.articleImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

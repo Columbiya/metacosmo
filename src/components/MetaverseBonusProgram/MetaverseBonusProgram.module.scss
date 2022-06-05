@@ -1,0 +1,228 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.programMainScreen {
+    margin-bottom: 200px;
+}
+
+.mainScreen {
+    margin-top: 100px;
+
+    background: url('../../assets/bonus-program/main-screen-image.png') center right no-repeat;
+}
+
+.programMainScreen {
+    margin-bottom: 200px;
+}
+
+.programTitle {
+    font-size: 72px;
+    text-transform: uppercase;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 100px;
+}
+
+.mainScreenText {
+    font-size: 24px;
+    font-weight: 700;
+    max-width: 705px;
+    line-height: 36px;
+
+    p {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.mainScreenSubtitle {
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 48px;
+
+    margin-bottom: 60px;
+}
+
+.examples {
+    margin-bottom: 70px;
+}
+
+.featuresInner {
+    margin-top: 150px;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+
+
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        position: absolute;
+        top: 182px;
+        left: 0;
+    }
+
+    &:first-child {
+        margin-bottom: 130px;
+        .feature {
+            &:nth-child(1) {
+                background: url('../../assets/bonus-program/features-1.png') left top no-repeat;
+            }
+        
+            &:nth-child(2) {
+                background: url('../../assets/bonus-program/features-2.png') left top no-repeat;
+            }
+        }
+    }
+
+    &:last-child {
+        .feature {
+            &:nth-child(1) {
+                background: url('../../assets/bonus-program/features-3.png') left top no-repeat;
+            }
+        
+            &:nth-child(2) {
+                background: url('../../assets/bonus-program/features-4.png') left top no-repeat;
+            }
+        }
+    }
+}
+
+.feature {
+    padding-top: 260px;
+
+    position: relative;
+
+    p {
+        font-size: 30px;
+        font-weight: 700;
+        max-width: 620px;
+
+        span {
+            font-size: 48px;
+            @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        position: absolute;
+        left: 0;
+        top: 175px;
+        z-index: 5;
+    }
+
+
+    &:nth-child(odd) {
+        max-width: 50%;
+    }
+
+    &:nth-child(even) {
+        max-width: 670px;
+    }
+}
+
+.rulesContent {
+    background: url('../../assets/bonus-program/rules-bg.jpg') center no-repeat;
+    background-size: cover;
+    height: 930px;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.rulesInner {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rulesContent {
+    margin-top: 90px;
+}
+
+.rule {
+    font-size: 36px;
+    line-height: 48px;
+    color: #fff;
+    font-weight: 800;
+
+    position: relative;
+
+    padding-left: 100px;
+
+    max-width: 1400px;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 50px;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        position: absolute;
+        top: 50%;
+        left: 60px;
+        transform: translateY(-50%) skew(-15deg, -15deg);
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 100px;
+    }
+}
+
+.start {
+    margin: 150px 0;
+}
+
+.startInner {
+    background: url('../../assets/bonus-program/wallet.png') center left no-repeat;
+    padding: 70px 0;
+    
+    display: flex;
+    justify-content: flex-end;
+}
+
+.startContent {
+    width: 60%;
+}
+
+.startTitle {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 48px;
+
+    max-width: 600px;
+
+    margin-bottom: 70px;
+}
+
+.learnMoreContainer {
+    margin: 200px 0;
+}

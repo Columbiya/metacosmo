@@ -1,0 +1,114 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.timeline {
+    margin: 100px 0;
+}
+
+.title {
+    font-size: 72px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    span {
+        @include colorTextWithGradient(54deg, $startColorGradient, $endColorGradient);
+    }
+}
+
+.info {
+    margin-top: 320px;
+    
+    span {
+        display: block;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        &:first-child {
+            font-size: 36px;
+        }
+
+        &:last-child {
+            font-size: 24px;
+        }
+    }
+}
+
+.text {
+    font-size: 36px;
+    font-weight: 700;
+
+    margin-bottom: 130px;
+}
+
+.parts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.part {
+    min-height: 520px;
+    width: 240px;
+    padding: 15px;
+
+    position: relative;
+
+    border: 1px solid #000;
+    border-radius: 125px;
+
+    img {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &.complete::after {
+        content: "";
+        display: block;
+        width: 17px;
+        height: 17px;
+        background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 10;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 5;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.date {
+    margin-bottom: 20px;
+}
+
+.bar {
+    position: relative;
+}
+
+.line {
+    width: 110%;
+    height: 40px;
+    
+    background: linear-gradient(54deg, $startColorGradient, $endColorGradient);
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    z-index: -1;
+    transform: translateY(-50%);
+}
