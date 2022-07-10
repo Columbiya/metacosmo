@@ -116,7 +116,7 @@ const Main = (props) => {
                     <div onClick={closeVideo} className={css.close}></div>
                 }
                 
-                {/* <div className={css.scene}>
+                <div className={css.scene}>
                     <div className={css.cube} style={{transform: `translateZ(-100px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`}}>
                         <div className={css.cubeFace + " " + css.front} onClick={() => setRotateY(y => y - 90)}>COSMO <br />+1,2 %</div>
                         <div className={css.cubeFace + " " + css.right} onClick={() => setRotateY(y => y - 90)}>right</div>
@@ -125,11 +125,11 @@ const Main = (props) => {
                         <div className={css.cubeFace + " " + css.top} onClick={() => setRotateX(x => x - 180)}>top</div>
                         <div className={css.cubeFace + " " + css.bottom} onClick={() => {setRotateX(0); setRotateY(0)}}>bottom</div>
                     </div>
-                </div> */}
+                </div>
             </div>
 
             
-            {/* <Popup isTokensPrice={true} /> */}
+            <Popup isTokensPrice={true} />
             
             <Join />
             <Immerse />

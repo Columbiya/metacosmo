@@ -21,8 +21,8 @@ import { useMoralisWeb3Api } from "react-moralis";
 const Popup = ({ errorText, onHide, amount, isCvr, isSubscribe, isTokensPrice }) => {
     const [isLoading, setLoading] = useState(false)
     const date = new Date(Date.now()).toLocaleString().split(',')[0]
-    // const Web3Api = useMoralisWeb3Api()
-    // const { loading: cosmoLoading, data, error } = useQuery(PAIR_QUERY, {variables: {id: '0xe9a7ac0cc3b76ee88fc0c2900e006f33fbecbde6'}})
+    const Web3Api = useMoralisWeb3Api()
+    // const { loading: cosmoLoading, data, error } = useQuery(PAIR_QUERY, {variables: {id: ''}})
 
     useEffect(() => {
         document.body.style.overflowY = 'hidden';
@@ -33,30 +33,36 @@ const Popup = ({ errorText, onHide, amount, isCvr, isSubscribe, isTokensPrice })
     }, [])
 
 
-    // useEffect(() => {
-    //     if (isTokensPrice) {
-    //         async function getTokens() {
-    //             const addresses = ['0x60E5FfdE4230985757E5Dd486e33E85AfEfC557b', '0x55ece1750677af5fccbf0f05b52169946c371878', '0x4de3a72f8f96d66b3c2e7da6fd49061e1879f722']
-    //             const prices = []
+    useEffect(() => {
+        if (isTokensPrice) {
+            async function getTokens() {
+                const addresses = ['0x60E5FfdE4230985757E5Dd486e33E85AfEfC557b', '0x55ece1750677af5fccbf0f05b52169946c371878', '0x4de3a72f8f96d66b3c2e7da6fd49061e1879f722']
+                const prices = []
 
-    //             for (let address of addresses) {
-    //                 const options = {
-    //                     address,
-    //                     chain: 'bsc',
-    //                     exchange: "PancakeSwapv2"
-    //                 }
-    //                 const price = await Web3Api.token.getTokenPrice(options)
-    //                 prices.push(price)
-    //             }
+                const options = {
+                    chain: 'bsc',
+                    exchange: "PancakeSwapv2"
+                }
 
-    //             const [cosmo, cclp, cvr] = prices
-            
-    //             console.log(cosmo.nativePrice.value / 10e18, cclp.nativePrice.value / 10e18, cvr.nativePrice.value / 10e18, 'bsc tokens')
-    //         }
+                const ethOptions = {
+                    chain: "eth",
+                    exchange: "uniswapv3"
+                }
 
-    //         getTokens()
-    //     }
-    // }, [isTokensPrice])
+                for (let address of addresses) {
+                    const price = await Web3Api.token.getTokenPrice({...options, address })
+                    prices.push(price)
+                }
+
+                const [cosmo, cclp, cvr] = prices
+                const cosmoPrice = await Web3Api.token.getTokenPrice({...ethOptions, address: "0x27cd7375478F189bdcF55616b088BE03d9c4339c"})
+                console.log(cosmoPrice, 'cosmoPrice')
+                console.log((cosmo.nativePrice.value / 10e18).toFixed(20), (cclp.nativePrice.value / 10e18).toFixed(20), (cvr.nativePrice.value / 10e18).toFixed(20), 'bsc tokens')
+            }
+
+            getTokens()
+        }
+    }, [isTokensPrice])
 
 
     const onDevSubmit = (data) => {
